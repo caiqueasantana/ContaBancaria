@@ -9,13 +9,11 @@ public class Conexao {
     private static final String USUARIO = "root";
     private static final String SENHA = "sua_senha";
 
-    // Bloco estático para carregar o driver JDBC do MySQL
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("Driver JDBC MySQL registrado com sucesso!");
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Driver MySQL não encontrado no classpath!", e);
+            throw new RuntimeException("Driver MySQL nÃ£o encontrado no classpath!", e);
         }
     }
 
